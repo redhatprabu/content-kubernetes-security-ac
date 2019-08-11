@@ -1,4 +1,4 @@
-###Create the Kubernetes Cluster
+# Create the Kubernetes Cluster
 The k8s-create.sh script should be in the cloud_user's home directory. You may list the directory contents with:
 
 $ ls -l
@@ -24,12 +24,12 @@ Verify the cluster is running with:
 $ kubectl get nodes
 
 
-###Configure the Required Namespace
+# Configure the Required Namespace
 
 $ kubectl create ns policy-demo
 
 
-###Create the Demo Pods
+# Create the Demo Pods
 
 Run two replicas of the nginx service:
 
@@ -50,7 +50,7 @@ To exit the interactive container session:
 / # exit
 
 
-###Enable Isolation
+# Enable Isolation
 
 To view that the nginx pods are running:
 
@@ -68,7 +68,7 @@ To exit the container shell:
 / # exit
 
 
-###Allow Restricted Access Using a Network Policy
+# Allow Restricted Access Using a Network Policy
 
 To download the yaml file:
 
@@ -80,7 +80,7 @@ To create the policy:
 
 $ kubectl create -f access-nginx.yaml
 
-###Test Isolation
+# Test Isolation
 
 To view that the nginx pods are running:
 
@@ -98,7 +98,7 @@ To exit the container shell:
 / # exit
 
 
-###Allow Restricted Access Using a Network Policy
+# Allow Restricted Access Using a Network Policy
 To download the yaml file:
 
 $ wget https://raw.github.com/linuxacademy/content-kubernetes-security-ac/master/access-nginx.yaml
@@ -110,7 +110,7 @@ To create the policy:
 $ kubectl create -f access-nginx.yaml
 
 
-###Verify that access to nginx is not allowed from another pod
+# Verify that access to nginx is not allowed from another pod
 
 Run a container shell in a pod called 'not-access':
 
@@ -124,7 +124,7 @@ To exit the container shell:
 
 / # exit
 
-###Delete the namespace to cleanup
+# Delete the namespace to cleanup
 
 To delete the namespace and thus terminate the running pods and nullify the network policies created, enter:
 
